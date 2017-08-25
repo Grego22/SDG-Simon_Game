@@ -11,3 +11,26 @@ colors.forEach(button => {
 		}, 300);
 	});
 });
+
+const colors = ["red", "blue", "yellow", "green"];
+
+const sequence = Arry.from({ length: 20 }, (v, k) => {
+	return colorsString[Math.floor(Math.random() * 4)];
+});
+
+const start = document.querySelector("button")[0];
+const state = {
+	count: 0
+};
+
+start.addEventListener("click", () => {
+	state.count = 1;
+
+	Array.from({ length: state.count }, (v, k) => {
+		new Promise(res => {
+			setTimeout(() => {
+				`${sequence[k]}`.style.filter;
+			});
+		});
+	});
+});
